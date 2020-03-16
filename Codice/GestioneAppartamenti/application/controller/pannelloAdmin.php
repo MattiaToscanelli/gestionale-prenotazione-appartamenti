@@ -19,7 +19,7 @@ class PannelloAdmin{
         $photos = $pam->getAllPhotos();
 
         require 'application/views/_template/header.php';
-        require 'application/views/pannelloAdmin.php';
+        require 'application/views/management/pannelloAdmin.php';
         require 'application/views/_template/footer.php';
 
     }

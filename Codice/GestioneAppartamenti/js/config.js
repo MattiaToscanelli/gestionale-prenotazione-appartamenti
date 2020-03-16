@@ -1,1 +1,1 @@
-const URL = "http://localhost/ProgettoAppartamenti/Codice/GestioneAppartamenti/"
+const URL = "http://localhost/ProgettoAppartamenti2/Codice/GestioneAppartamenti/";

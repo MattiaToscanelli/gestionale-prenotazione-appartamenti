@@ -3,7 +3,7 @@
     <body>
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="<?php echo URL; ?>">
-                <img src="../../../img/logo_transparent.png" width="30" height="30" class="d-inline-block align-top">
+                <img src="img/logo_transparent.png" width="30" height="30" class="d-inline-block align-top">
                 FastRent
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,7 @@
                 <div class="min-height-200px">
                     <div class="pd-20 bg-white border-radius-4 box-shadow mb-30 pers-home">
                         <div class="text-center">
-                            <img src="../../../img/logo_transparent.png" alt="login" class="login-img" width="100px">
+                            <img src="img/logo_transparent.png" alt="login" class="login-img" width="100px">
                             <h2 class="text-center mb-30">Pannello Admin</h2>
                         </div>
                         <h4 class="mb-30">Gestione utenti</h4>
@@ -77,171 +77,171 @@
                                 <?php endforeach; ?>
                                 </tbody>
                             </table>
-                            <!-- Modal Info-->
-                            <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Dati</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body font-18">
-                                            <table class="table">
-                                                <tbody>
-                                                <tr>
-                                                    <th>Nome</th>
-                                                    <td><span id="name_modal"></span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Cognome</th>
-                                                    <td><span id="surname_modal"></span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Email</th>
-                                                    <td><span id="email_modal"></span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Via</th>
-                                                    <td><span id="street_modal"></span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Città</th>
-                                                    <td><span id="city_modal"></span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>CAP</th>
-                                                    <td><span id="nap_modal"></span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Tipo</th>
-                                                    <td><span id="type_modal"></span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Numero telefono mobile</th>
-                                                    <td><span id="mobile_number_modal"></span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Numero telefono fisso</th>
-                                                    <td><span id="landline_number_modal"></span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Numero telefono ufficio</th>
-                                                    <td><span id="office_number_modal"></span></td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-                                        </div>
+                        </div>
+                        <!-- Modal Info-->
+                        <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Dati</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- Modal Modify-->
-                            <div class="modal fade" id="modifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Modifica</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body font-18">
-                                            <div id="alert_validation" class="alert alert-danger" role="alert" style="display: none">
-                                                Uno o più campi della non sono validi!
-                                            </div>
-                                            <div id="alert_validation_s" class="alert alert-success" role="alert" style="display: none">
-                                                Dati modificati!
-                                            </div>
-                                            <form id="form_admin_panel">
-                                                <table class="table">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>Nome <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="3-50 caratteri, solo lettere e caratteri da scrittura"></i></th>
-                                                            <td><input type="text" id="name_modal_input" class="form-control"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Cognome <i class="fa fa-info-circle"  data-toggle="tooltip" data-placement="top" title="3-50 caratteri, solo lettere e caratteri da scrittura"></i></th>
-                                                            <td><input type="text" id="surname_modal_input" class="form-control"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Via <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="3-50 caratteri, lettere, numeri e caratteri da scrittura"></i></th>
-                                                            <td><input type="text" id="street_modal_input" class="form-control"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Città <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="3-50 caratteri, solo lettere e caratteri da scrittura"></i></th>
-                                                            <td><input type="text" id="city_modal_input" class="form-control"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>CAP <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="4-5 numeri"></i></th>
-                                                            <td><input type="text" id="nap_modal_input" class="form-control"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Tipo <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Utente registrato (utente che puo effetturare riservazioni), Utente verificato (utente che può essere anche un proprietario) e Admin (utente che gestisce la pagina)"></i></th>
-                                                            <td>
-                                                                <select class="form-control" id="type_modal_input">
-                                                                    <option value="1">Utente registrato</option>
-                                                                    <option value="3">Utente verificato</option>
-                                                                    <option value="7">Admin</option>
-                                                                </select>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Numero telefono mobile <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="10-14 numeri"></i></th>
-                                                            <td><input type="text" id="mobile_number_modal_input" class="form-control"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Numero telefono fisso <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="10-14 numeri"></i></th>
-                                                            <td><input type="text" id="landline_number_modal_input" class="form-control"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Numero telefono ufficio <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="10-14 numeri"></i></th>
-                                                            <td><input type="text" id="office_number_modal_input" class="form-control"></td>
-                                                        </tr>
-                                                        <input type="hidden" id="email_modal_input" disabled>
-                                                    </tbody>
-                                                </table>
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary" onclick="saveDataUser()">Salva</button>
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-                                        </div>
+                                    <div class="modal-body font-18">
+                                        <table class="table">
+                                            <tbody>
+                                            <tr>
+                                                <th>Nome</th>
+                                                <td><span id="name_modal"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Cognome</th>
+                                                <td><span id="surname_modal"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Email</th>
+                                                <td><span id="email_modal"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Via</th>
+                                                <td><span id="street_modal"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Città</th>
+                                                <td><span id="city_modal"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>CAP</th>
+                                                <td><span id="nap_modal"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Tipo</th>
+                                                <td><span id="type_modal"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Numero telefono mobile</th>
+                                                <td><span id="mobile_number_modal"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Numero telefono fisso</th>
+                                                <td><span id="landline_number_modal"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Numero telefono ufficio</th>
+                                                <td><span id="office_number_modal"></span></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                </div>
-                            </div>
-                            <!--Modal Delete-->
-                            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Elimina</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body font-18">
-                                            <div id="alert_del" class="alert alert-success" role="alert" style="display: none">
-                                                Utente eliminato!
-                                            </div>
-                                            <div class="text-center">
-                                                <img src="../../../img/warning.png" height="100px" width="100px">
-                                                <p>Sei sicuro di voler eliminare questo utente?</p>
-                                            </div>
-                                        </div>
-                                        <input type="hidden" id="email_modal_input_del" disabled>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger" onclick="deleteUser()">Elimina</button>
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-                                        </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <link rel="stylesheet" type="text/css" href="../../../src/plugins/dropzone/src/dropzone.css">
+                        <!-- Modal Modify-->
+                        <div class="modal fade" id="modifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modifica</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body font-18">
+                                        <div id="alert_validation" class="alert alert-danger" role="alert" style="display: none">
+                                            Uno o più campi della non sono validi!
+                                        </div>
+                                        <div id="alert_validation_s" class="alert alert-success" role="alert" style="display: none">
+                                            Dati modificati!
+                                        </div>
+                                        <form id="form_admin_panel">
+                                            <table class="table">
+                                                <tbody>
+                                                <tr>
+                                                    <th>Nome <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="3-50 caratteri, solo lettere e caratteri da scrittura"></i></th>
+                                                    <td><input type="text" id="name_modal_input" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Cognome <i class="fa fa-info-circle"  data-toggle="tooltip" data-placement="top" title="3-50 caratteri, solo lettere e caratteri da scrittura"></i></th>
+                                                    <td><input type="text" id="surname_modal_input" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Via <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="3-50 caratteri, lettere, numeri e caratteri da scrittura"></i></th>
+                                                    <td><input type="text" id="street_modal_input" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Città <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="3-50 caratteri, solo lettere e caratteri da scrittura"></i></th>
+                                                    <td><input type="text" id="city_modal_input" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>CAP <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="4-5 numeri"></i></th>
+                                                    <td><input type="text" id="nap_modal_input" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Tipo <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Utente registrato (utente che puo effetturare riservazioni), Utente verificato (utente che può essere anche un proprietario) e Admin (utente che gestisce la pagina)"></i></th>
+                                                    <td>
+                                                        <select class="form-control" id="type_modal_input">
+                                                            <option value="1">Utente registrato</option>
+                                                            <option value="3">Utente verificato</option>
+                                                            <option value="7">Admin</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Numero telefono mobile <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="10-14 numeri"></i></th>
+                                                    <td><input type="text" id="mobile_number_modal_input" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Numero telefono fisso <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="10-14 numeri"></i></th>
+                                                    <td><input type="text" id="landline_number_modal_input" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Numero telefono ufficio <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="10-14 numeri"></i></th>
+                                                    <td><input type="text" id="office_number_modal_input" class="form-control"></td>
+                                                </tr>
+                                                <input type="hidden" id="email_modal_input" disabled>
+                                                </tbody>
+                                            </table>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" onclick="saveDataUser()">Salva</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Modal Delete-->
+                        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Elimina</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body font-18">
+                                        <div id="alert_del" class="alert alert-success" role="alert" style="display: none">
+                                            Utente eliminato!
+                                        </div>
+                                        <div class="text-center">
+                                            <img src="img/warning.png" height="100px" width="100px">
+                                            <p>Sei sicuro di voler eliminare questo utente?</p>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" id="email_modal_input_del" disabled>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" onclick="deleteUser()">Elimina</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <link rel="stylesheet" type="text/css" href="src/plugins/dropzone/src/dropzone.css">
                         <h4 class="mb-30 mt-80">Gestione Pagina Principale</h4>
                         <h5 class="mb-10">Foto</h5>
                         <div class="col-lg-12 col-sm-12 col-md-12 pd-0">
@@ -336,7 +336,7 @@
                                             Foto eliminata!
                                         </div>
                                         <div class="text-center">
-                                            <img src="../../../img/warning.png" height="100px" width="100px">
+                                            <img src="img/warning.png" height="100px" width="100px">
                                             <p>Sei sicuro di voler eliminare questa Foto?</p>
                                         </div>
                                     </div>
@@ -521,7 +521,7 @@
                                             Notizia eliminata!
                                         </div>
                                         <div class="text-center">
-                                            <img src="../../../img/warning.png" height="100px" width="100px">
+                                            <img src="img/warning.png" height="100px" width="100px">
                                             <p>Sei sicuro di voler eliminare questa Notizia?</p>
                                         </div>
                                     </div>
@@ -537,9 +537,9 @@
                 </div>
             </div>
         </div>
-        <script src="../../../vendors/scripts/script.js"></script>
-        <script src="../../../js/manageUser.js"></script>
-        <script src="../../../js/managePhoto.js"></script>
-        <script src="../../../js/manageNews.js"></script>
-        <script src="../../../js/adminPanel.js"></script>
+        <script src=vendors/scripts/script.js"></script>
+        <script src="js/manageUser.js"></script>
+        <script src="js/managePhoto.js"></script>
+        <script src="js/manageNews.js"></script>
+        <script src="js/adminPanel.js"></script>
 
