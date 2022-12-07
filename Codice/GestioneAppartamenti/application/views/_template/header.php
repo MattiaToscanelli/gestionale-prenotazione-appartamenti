@@ -13,8 +13,6 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="96x96" href="img/logo_transparent.png">
     <!-- Google Font -->
-    <link rel="stylesheet" type="text/css" href="src/plugins/ion-rangeslider/css/ion.rangeSlider.css">
-    <link rel="stylesheet" type="text/css" href="src/plugins/ion-rangeslider/css/ion.rangeSlider.skinHTML5.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- CSS -->
